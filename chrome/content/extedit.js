@@ -328,9 +328,23 @@ function tmpDir() {
 
 //-----------------------------------------------------------------------------
 function tmpFilename(str, use83filename) {
+	var t = "";
+	var numRandomBytes = 16;
 
-	var d = new Date();
-	var t = d.getTime();
+	try {
+		var random = new Uint8Array(numRandomBytes);
+		window.crypto.getRandomValues(random);
+		for (var i = 0; i < numRandomBytes; i++) {
+			t += random[i].toString(16);
+		}
+	}
+	catch (e) {
+		// In case we're using a version that doesn't have window.crypto.
+		for (var i = 0; i < numRandomBytes; i++) {
+			t += Math.floor(Math.random() * 256).toString(16);
+		}
+	}
+
 	var fn = tmpDir() + dirSeparator;
 	var basenameLenLimit = 80; // limit basename to X chars (don't use values smaller than t.length)
 
