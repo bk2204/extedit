@@ -1,0 +1,12 @@
+ExtEdit
+=======
+
+ExtEdit is a Thunderbird/Icedove extension to allow editing an email in an
+external editor.  It is based on
+http://globs.org/articles.php?lng=en&pg=2[Alexandre Feblot's External Editor
+extension].
+
+This extension is in a very preliminary state, and has been updated just enough
+to get it working in modern versions of Thunderbird.  Pull requests are welcome.
+
+To build, simply type `make`.  You can then install it in Thunderbird.
