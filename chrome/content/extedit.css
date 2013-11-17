@@ -1,6 +1,6 @@
 #extedit_bt {
-    list-style-image: url("chrome://extedit/content/generic24.png");
+	list-style-image: url("chrome://extedit/content/generic24.png");
 }
 toolbar[iconsize="small"] #extedit_bt {
-    list-style-image: url("chrome://extedit/content/generic16.png");
+	list-style-image: url("chrome://extedit/content/generic16.png");
 }

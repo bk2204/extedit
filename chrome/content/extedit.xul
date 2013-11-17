@@ -1,47 +1,47 @@
 <?xml version="1.0"?>
 
 <?xml-stylesheet
-    href="chrome://extedit/content/extedit.css"
-    type="text/css"?> 
+	href="chrome://extedit/content/extedit.css"
+	type="text/css"?> 
 
 <!DOCTYPE overlay SYSTEM "chrome://extedit/locale/extedit.dtd">
 
 <overlay id="exteditOverlay" 
-    xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
-    <script type="application/x-javascript"
-        src="chrome://global/content/nsUserSettings.js"/>
+	<script type="application/x-javascript"
+		src="chrome://global/content/nsUserSettings.js"/>
 
-    <script type="application/x-javascript"
-        src="chrome://extedit/content/pref.js" />
+	<script type="application/x-javascript"
+		src="chrome://extedit/content/pref.js" />
 
-    <script type="application/x-javascript"
-        src="chrome://extedit/content/extedit.js" />
+	<script type="application/x-javascript"
+		src="chrome://extedit/content/extedit.js" />
 
-    <window id="msgcomposeWindow"
-        onload="ComposeLoad(); initExtedit();"
-        onclose="if (tryCloseExtEdit()) {return DoCommandClose(); } else { return false; }" />
+	<window id="msgcomposeWindow"
+		onload="ComposeLoad(); initExtedit();"
+		onclose="if (tryCloseExtEdit()) {return DoCommandClose(); } else { return false; }" />
 
-    <keyset id="tasksKeys">
-        <key id="key_extedit" key="E" modifiers="accel" oncommand="launchExtEdit()"/>
-    </keyset>
+	<keyset id="tasksKeys">
+		<key id="key_extedit" key="E" modifiers="accel" oncommand="launchExtEdit()"/>
+	</keyset>
 
-    <menupopup id="taskPopup">
-        <menuitem id="exteditMenuItem" label="&exteditMenuItem.label;" key="key_extedit" oncommand="launchExtEdit()"/>
-    </menupopup>
+	<menupopup id="taskPopup">
+		<menuitem id="exteditMenuItem" label="&exteditMenuItem.label;" key="key_extedit" oncommand="launchExtEdit()"/>
+	</menupopup>
 
-    <toolbarpalette id="MsgComposeToolbarPalette">
-        <toolbarbutton class="toolbarbutton-1"
-            id="extedit_bt"
-            label="External Editor"
-            tooltiptext="&extedit_bt.tooltiptext;"
-            type="menu-button" 
-            oncommand="launchExtEdit();">
-            <menupopup id="extedit_html_options">
-                <menuitem id="extedit_editAsHtml" type="radio" label="&extedit_editAsHtml.label;" oncommand="savePrefEditHtmlAsHtml(true)"/>
-                <menuitem id="extedit_editAsPlain" type="radio" label="&extedit_editAsPlain.label;" oncommand="savePrefEditHtmlAsHtml(false)"/>
-            </menupopup>
-        </toolbarbutton>
-    </toolbarpalette>
+	<toolbarpalette id="MsgComposeToolbarPalette">
+		<toolbarbutton class="toolbarbutton-1"
+			id="extedit_bt"
+			label="External Editor"
+			tooltiptext="&extedit_bt.tooltiptext;"
+			type="menu-button" 
+			oncommand="launchExtEdit();">
+			<menupopup id="extedit_html_options">
+				<menuitem id="extedit_editAsHtml" type="radio" label="&extedit_editAsHtml.label;" oncommand="savePrefEditHtmlAsHtml(true)"/>
+				<menuitem id="extedit_editAsPlain" type="radio" label="&extedit_editAsPlain.label;" oncommand="savePrefEditHtmlAsHtml(false)"/>
+			</menupopup>
+		</toolbarbutton>
+	</toolbarpalette>
 
 </overlay>
