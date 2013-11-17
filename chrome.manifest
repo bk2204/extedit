@@ -1,5 +1,5 @@
 overlay	chrome://messenger/content/messengercompose/messengercompose.xul	chrome://extedit/content/extedit.xul
 overlay	chrome://global/content/customizeToolbar.xul	chrome://extedit/content/extedit.xul
-content	extedit	jar:chrome/extedit.jar!/content/
-locale	extedit	en-US	jar:chrome/extedit.jar!/locale/en-US/extedit/
+content	extedit	/chrome/content/
+locale	extedit	en-US	/chrome/locale/en-US/extedit/
 
