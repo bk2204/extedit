@@ -1,0 +1,117 @@
+<?xml version="1.0"?> 
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<!DOCTYPE dialog SYSTEM "chrome://extedit/locale/extedit.dtd">
+
+<dialog xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+    title="&extedit-settings.title;"
+    id="extedit-settings"
+    orient="vertical"
+    flex="0"
+    onload="onLoad();"
+    ondialogaccept="onOK();return true;"
+    buttons="accept,cancel"
+    persist="screenX screenY">
+
+    <script type="application/x-javascript"
+        src="chrome://global/content/nsUserSettings.js"/>
+
+    <script type="application/x-javascript"
+        src="chrome://extedit/content/pref.js" />
+
+    <script type="application/x-javascript"
+        src="chrome://extedit/content/settings.js" />
+
+    <broadcaster id="extedit_brcstEditHeaders"/>
+
+
+
+    <groupbox><caption id="extedit_exe" label="&extedit_exe.label;"/>
+        <vbox align="stretch">
+            <hbox align="center">
+                <label id="extedit_editor" value="&extedit_editor.value;"/>
+                <textbox    id="extedit_leEditor"
+                            flex="1"
+                            preftype="string"
+                            prefattribute="value"
+                            prefstring="extedit.default.editor"/>
+                <button id="extedit_btBrowse" label="&extedit_btBrowse.label;" oncommand="selectEditor();"/>
+            </hbox>
+            <checkbox   id="extedit_cbEditorUnicode"
+                        label="&extedit_cbEditorUnicode.label;"
+                        preftype="bool" 
+                        prefattribute="checked"
+                        prefstring="extedit.editor.unicode"/>
+            <checkbox   id="extedit_cbEditor83Filename"
+                        label="&extedit_cbEditor83Filename.label;"
+                        preftype="bool" 
+                        prefattribute="checked"
+                        prefstring="extedit.editor.83filename"/>
+            <hbox align="center">
+                <description id="extedit_warn" style="width: 300px">&extedit_warn.value;</description>
+                <spacer flex="1"/>
+            </hbox>
+        </vbox>
+    </groupbox>
+
+    <groupbox >
+        <caption>
+            <checkbox   id="extedit_cbEditHeaders"
+                        label="&extedit_cbEditHeaders.label;"
+                        tooltiptext="&extedit_cbEditHeaders.tooltiptext;"
+                        oncommand="activate('extedit_cbEditHeaders', 'extedit_brcstEditHeaders')"
+                        preftype="bool" 
+                        prefattribute="checked"
+                        prefstring="extedit.headers.edit"/>
+        </caption>
+        <grid flex="1">
+            <columns>
+                <column flex="1"/>
+                <column flex="1"/>
+                <column flex="1"/>
+            </columns>
+            <rows>
+                <row align="center">
+                    <checkbox   id="extedit_cbEditHeaderSubject"
+                                label="&extedit_cbEditHeaderSubject.label;"
+                                observes="extedit_brcstEditHeaders"
+                                preftype="bool" 
+                                prefattribute="checked"
+                                prefstring="extedit.headers.edit.subject"/>
+                    <checkbox   id="extedit_cbEditHeaderTo"
+                                label="&extedit_cbEditHeaderTo.label;"
+                                observes="extedit_brcstEditHeaders"
+                                preftype="bool" 
+                                prefattribute="checked"
+                                prefstring="extedit.headers.edit.to"/>
+                    <checkbox   id="extedit_cbEditHeaderCc"
+                                label="&extedit_cbEditHeaderCc.label;"
+                                observes="extedit_brcstEditHeaders"
+                                preftype="bool" 
+                                prefattribute="checked"
+                                prefstring="extedit.headers.edit.cc"/>
+                </row>
+                <row align="center">
+                    <checkbox   id="extedit_cbEditHeaderBcc"
+                                label="&extedit_cbEditHeaderBcc.label;"
+                                observes="extedit_brcstEditHeaders"
+                                preftype="bool" 
+                                prefattribute="checked"
+                                prefstring="extedit.headers.edit.bcc"/>
+                    <checkbox   id="extedit_cbEditHeaderReplyTo"
+                                label="&extedit_cbEditHeaderReplyTo.label;"
+                                observes="extedit_brcstEditHeaders"
+                                preftype="bool" 
+                                prefattribute="checked"
+                                prefstring="extedit.headers.edit.replyto"/>
+                    <checkbox   id="extedit_cbEditHeaderNewsgroup"
+                                label="&extedit_cbEditHeaderNewsgroup.label;"
+                                observes="extedit_brcstEditHeaders"
+                                preftype="bool" 
+                                prefattribute="checked"
+                                prefstring="extedit.headers.edit.newsgroup"/>
+                </row>
+            </rows>
+        </grid>
+    </groupbox>
+</dialog>

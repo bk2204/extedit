@@ -1,0 +1,40 @@
+
+overlay	chrome://messenger/content/messengercompose/messengercompose.xul	chrome://extedit/content/extedit.xul
+overlay	chrome://global/content/customizeToolbar.xul	chrome://extedit/content/extedit.xul
+content	extedit	jar:chrome/extedit.jar!/content/
+
+locale	extedit	en-US	jar:chrome/extedit.jar!/locale/en-US/extedit/
+
+locale	extedit	fr-FR	jar:chrome/extedit.jar!/locale/fr-FR/extedit/
+
+locale	extedit	it-IT	jar:chrome/extedit.jar!/locale/it-IT/extedit/
+
+locale	extedit	es-ES	jar:chrome/extedit.jar!/locale/es-ES/extedit/
+
+locale	extedit	sk-SK	jar:chrome/extedit.jar!/locale/sk-SK/extedit/
+
+locale	extedit	ja-JP	jar:chrome/extedit.jar!/locale/ja-JP/extedit/
+
+locale	extedit	nl-NL	jar:chrome/extedit.jar!/locale/nl-NL/extedit/
+
+locale	extedit	pl-PL	jar:chrome/extedit.jar!/locale/pl-PL/extedit/
+
+locale	extedit	zh-TW	jar:chrome/extedit.jar!/locale/zh-TW/extedit/
+
+locale	extedit	zh-CN	jar:chrome/extedit.jar!/locale/zh-CN/extedit/
+
+locale	extedit	fi-FI	jar:chrome/extedit.jar!/locale/fi-FI/extedit/
+
+locale	extedit	de-DE	jar:chrome/extedit.jar!/locale/de-DE/extedit/
+
+locale	extedit	ru-RU	jar:chrome/extedit.jar!/locale/ru-RU/extedit/
+
+locale	extedit	ar	    jar:chrome/extedit.jar!/locale/ar/extedit/
+
+locale	extedit	be-BY	jar:chrome/extedit.jar!/locale/be-BY/extedit/
+
+locale	extedit	uk-UA	jar:chrome/extedit.jar!/locale/uk-UA/extedit/
+
+locale	extedit	ro-RO	jar:chrome/extedit.jar!/locale/ro-RO/extedit/
+
+locale	extedit	ca-AD	jar:chrome/extedit.jar!/locale/ca-AD/extedit/
