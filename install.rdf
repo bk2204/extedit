@@ -9,7 +9,7 @@
 		<version>0.0.1</version>
 		<!-- description done with the prefs.js and locale/properties files -->
 		<!-- Based on the External Editor extension by Alexandre Feblot. -->
-		<creator>brian m. carlson and Alexandre Feblot</creator>
+		<creator>brian m. carlson</creator>
 		<iconURL>chrome://extedit/content/exteditor.png</iconURL>
 
 		<targetApplication>
