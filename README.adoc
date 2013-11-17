@@ -2,11 +2,28 @@ ExtEdit
 =======
 
 ExtEdit is a Thunderbird/Icedove extension to allow editing an email in an
-external editor.  It is based on
+external editor, such as Vim or Emacs.  It is based on
 http://globs.org/articles.php?lng=en&pg=2[Alexandre Feblot's External Editor
 extension].
 
 This extension is in a very preliminary state, and has been updated just enough
-to get it working in modern versions of Thunderbird.  Pull requests are welcome.
+to get it working in modern versions of Thunderbird.  Further work will aim to
+improve the codebase and add new features.
 
-To build, simply type `make`.  You can then install it in Thunderbird.
+To build, simply type `make`.  You can then install the XPI in Thunderbird.
+
+License
+-------
+
+ExtEdit is licensed under your choice of the Mozilla Public License, version 1.1
+or the GNU General Public License, version 2 or later.
+
+Contributing
+------------
+
+Pull requests are welcome.  The standard is to use hard tabs, aligned at four
+spaces.  The current codebase is moving in that direction, even if it isn't
+there yet.
+
+If you're submitting code, please sign off your work in compliance with the
+Developer's Certificate of Origin, version 1.1.
