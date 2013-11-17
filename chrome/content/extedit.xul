@@ -19,7 +19,7 @@
         src="chrome://extedit/content/extedit.js" />
 
     <window id="msgcomposeWindow"
-        onload="ComposeLoad(); initExteditor();"
+        onload="ComposeLoad(); initExtedit();"
         onclose="if (tryCloseExtEdit()) {return DoCommandClose(); } else { return false; }" />
 
     <keyset id="tasksKeys">
