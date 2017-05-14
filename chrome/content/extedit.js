@@ -292,17 +292,17 @@ function initExtedit() {
 
 	settingsObserver = new extEditSettingsObserver();
 
-	var editHtmlAsHtml = nsPreferences.getBoolPref('extedit.html.editAsHtml', true);
-	prefNotifierExe                      = nsPreferences.copyUnicharPref('extedit.default.editor', "");
-	prefEditorUnicode                    = nsPreferences.getBoolPref('extedit.editor.unicode', true);
-	prefEditor83Filename                 = nsPreferences.getBoolPref('extedit.editor.83filename', false);
-	prefEditHeaders[extedit_GLOBAL]    = nsPreferences.getBoolPref('extedit.headers.edit', true);
-	prefEditHeaders[extedit_SUBJECT]   = nsPreferences.getBoolPref('extedit.headers.edit.subject', true);
-	prefEditHeaders[extedit_TO]        = nsPreferences.getBoolPref('extedit.headers.edit.to', true);
-	prefEditHeaders[extedit_CC]        = nsPreferences.getBoolPref('extedit.headers.edit.cc', true);
-	prefEditHeaders[extedit_BCC]       = nsPreferences.getBoolPref('extedit.headers.edit.bcc', true); 
-	prefEditHeaders[extedit_REPLY_TO]  = nsPreferences.getBoolPref('extedit.headers.edit.replyto', false);
-	prefEditHeaders[extedit_NEWSGROUP] = nsPreferences.getBoolPref('extedit.headers.edit.newsgroup', false);
+	var editHtmlAsHtml                 = customPrefs.getBoolPref('extedit.html.editAsHtml', true);
+	prefNotifierExe                    = customPrefs.copyUnicharPref('extedit.default.editor', "");
+	prefEditorUnicode                  = customPrefs.getBoolPref('extedit.editor.unicode', true);
+	prefEditor83Filename               = customPrefs.getBoolPref('extedit.editor.83filename', false);
+	prefEditHeaders[extedit_GLOBAL]    = customPrefs.getBoolPref('extedit.headers.edit', true);
+	prefEditHeaders[extedit_SUBJECT]   = customPrefs.getBoolPref('extedit.headers.edit.subject', true);
+	prefEditHeaders[extedit_TO]        = customPrefs.getBoolPref('extedit.headers.edit.to', true);
+	prefEditHeaders[extedit_CC]        = customPrefs.getBoolPref('extedit.headers.edit.cc', true);
+	prefEditHeaders[extedit_BCC]       = customPrefs.getBoolPref('extedit.headers.edit.bcc', true); 
+	prefEditHeaders[extedit_REPLY_TO]  = customPrefs.getBoolPref('extedit.headers.edit.replyto', false);
+	prefEditHeaders[extedit_NEWSGROUP] = customPrefs.getBoolPref('extedit.headers.edit.newsgroup', false);
 
 	initButton(prefNotifierExe, editHtmlAsHtml);
 	headersEnd = "-=-=-=-=-=-=-=-=-=# " + getLocaleString("DontRemoveThisLine") + " #=-=-=-=-=-=-=-=-=-" + newLine;
@@ -310,7 +310,7 @@ function initExtedit() {
 
 //-----------------------------------------------------------------------------
 function savePrefEditHtmlAsHtml(flag) {
-	nsPreferences.setBoolPref('extedit.html.editAsHtml', flag);
+	customPrefs.setBoolPref('extedit.html.editAsHtml', flag);
 }
 
 //-----------------------------------------------------------------------------
